@@ -1,0 +1,31 @@
+{
+    "validTestData": {
+        "mailId": "apale.sujay@gmail.com",
+        "password": "password123"
+    },
+
+    "invalidMail":{
+        "mailId": "apalesujay@gmail.com",
+        "password": "password123"
+    },
+
+    "invalidPassword":{
+        "mailId": "apale.sujay@gmail.com",
+        "password": "password245"
+    },
+    
+    "invalidData":{
+        "mailId": "bhosalenityanand@gmail.com",
+        "password": "nityanand236"
+    },
+
+    "invalidTestData":{
+        "mailId": ".",
+        "password": "."
+    },
+
+    "lessCharacterPswd":{
+        "mailId": "apale.sujay@gmail.com",
+        "password":"pass"
+    }
+}

@@ -1,0 +1,19 @@
+{
+    "loginData":{
+        "mailId": "apale.sujay@gmail.com",
+        "password": "password123"
+    },
+
+    "validTrackData":{
+        "orderID":5104410003021
+    },
+
+    "invalidTrackData":{
+        "orderID":410124870
+    },
+
+    "blankTestData":{
+        "orderID":" "
+    }
+
+}
