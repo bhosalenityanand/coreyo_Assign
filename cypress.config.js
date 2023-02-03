@@ -5,6 +5,11 @@ module.exports = defineConfig({
     setupNodeEvents(on, config) {
       // implement node event listeners here
     },
-    "failOnStatusCode": false 
+    "failOnStatusCode": false,
+    env:{
+      stagingUser:"https://staging-user-coreyo.web.app/",
+      stagingPatner:"https://staging-reseller-coreyo.web.app/"
+    }
+    
   },
 });

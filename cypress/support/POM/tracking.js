@@ -39,8 +39,8 @@ export class ShipTrack{
 
         let message = 'Please check your Order ID/ AWB'
         cy.get(this.elements.errMessage).first().find('div').first().find('div').first().find('div').eq(1).should('be.visible')
-         
     }
+    
 
     
 }

@@ -9,7 +9,8 @@ let searchProvider = new provSearch()
 describe('verify the provider search functionality for parcel', () => {
 
     beforeEach(function () {
-        cy.loginUser('https://reference-user-web.web.app/', data.login.mailId, data.login.password, 'Sujay Apale')
+        // cy.loginUser('https://reference-user-web.web.app/', data.login.mailId, data.login.password, 'Sujay Apale')
+        cy.stgLoginUser('user',data.login.mailId, data.login.password, 'Sujay Apale')
     })
 
     it('TC_01 verify the provider search functionality for valid data', () => {

@@ -1,0 +1,37 @@
+{
+    "Invipayment":{
+        "mailId": "testcoreyo@yopmail.com",
+        "password": "Password@123"
+    },
+
+    "ValidPayment":{
+        "mailId": "apale.sujay@gmail.com",
+        "password": "password123"
+    },
+
+    "searchData":{
+        "pickLocationPin":560078,
+        "dropLocationPin":560038,
+        "weight":500
+    },
+
+    "pick":{
+        "name":"sujay",
+        "mobNo":7412121223,
+        "add":"bcuwbducihaisckahhc",
+        "city":"banglore",
+        "state":"karnataka",
+        "country":"India"
+    },
+
+    "delivary":{
+        "name":"Swadhin",
+        "mobNo":7412121212,
+        "add":"vdytfahciheejc",
+        "city":"Hydrabad",
+        "state":"AndraPradesh",
+        "country":"India"
+    }
+    
+    
+}

@@ -5,15 +5,15 @@ export class login {
         inpMail: 'input[type="email"]',
         inpPawd: 'input[type="password"]',
         buttonlog: 'button[type="submit"]',
-        valName: 'button[id="headlessui-menu-button-20"] >p',
+        valName: '#headlessui-menu-button-2>p',
         invalidMessage:'div[id="root"] div[aria-live="polite"]',
-        manditoryMsg:'form >span'
+        manditoryMsg:'[class="space-y-0.5 p-4"]>p'
 
     }
 
-    visit(url) {
-        cy.visit(url)
-        cy.get(this.elements.valid).eq(0).find('p').should('have.text', 'Courier')
+    visit() {
+        cy.visit(Cypress.env('staging'))
+        // cy.get(this.elements.valid).eq(0).find('p').should('have.text', 'Courier')
     }
 
     login() {
@@ -61,12 +61,12 @@ export class login {
     }
 
     manditoryField(){
-        cy.get(this.elements.manditoryMsg).eq(2).should('have.text','Please enter a valid email.')
-        cy.get(this.elements.manditoryMsg).eq(4).should('have.text','Please lengthen the password upto 8 characters.')
+        cy.get(this.elements.manditoryMsg).eq(1).should('have.text','Please enter a valid email.')
+        cy.get(this.elements.manditoryMsg).eq(3).should('have.text','Please lengthen the password upto 8 characters.')
     }
 
     passwordErrorMsg(){
-        cy.get(this.elements.manditoryMsg).eq(3).invoke('show').should('have.text','Please lengthen the password upto 8 characters.')
+        cy.get(this.elements.manditoryMsg).eq(2).invoke('show').should('have.text','Please lengthen the password upto 8 characters.')
     }
 
 

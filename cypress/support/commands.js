@@ -24,8 +24,8 @@
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 
-Cypress.Commands.add('loginUser',(url,mail,password,name)=>{
-    cy.visit(url)
+Cypress.Commands.add('loginUser',(mail,password,name)=>{
+    cy.visit(Cypress.env('staging'))
     cy.get('span[class="mx-2"]').first().click()
     cy.contains('Login with email').click()
     cy.get('input[type="email"]').type(mail)
@@ -33,4 +33,24 @@ Cypress.Commands.add('loginUser',(url,mail,password,name)=>{
     cy.get('button[type="submit"]').last().click()
     cy.get('button[id="headlessui-menu-button-20"] >p').should('have.text',name)
 
+})
+
+Cypress.Commands.add('stgLoginUser',(type,mail,password,name)=>{
+    if(type == 'user'){
+        cy.visit(Cypress.env('stagingUser'))
+    }
+    else if(type == 'patner'){
+        cy.visit(Cypress.env('stagingPatner'))
+    }
+    // cy.visit(Cypress.env('stagingUser'))
+    cy.get('input[type="email"]').type(mail)
+    cy.get('input[type="password"]').type(password)
+    cy.get('button[type="submit"]').last().click()
+    cy.get('#headlessui-menu-button-2>p').should('have.text',name)
+})
+
+Cypress.Commands.add('login',(url,username,pass)=>{
+    cy.visit(url)
+    cy.get('#username').type(username)
+    cy.get
 })
