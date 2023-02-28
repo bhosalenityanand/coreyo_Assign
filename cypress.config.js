@@ -9,7 +9,9 @@ module.exports = defineConfig({
     env:{
       stagingUser:"https://staging-user-coreyo.web.app/",
       stagingPatner:"https://staging-reseller-coreyo.web.app/"
-    }
+    },
+    // "experimentalSessionAndOrigin":true
+
     
   },
 });
